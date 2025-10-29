@@ -59,7 +59,7 @@ The `DRY_THRESHOLD` value determines when watering occurs:
 - **Lower values** (e.g., 600): Water more frequently (moister soil)
 
 To calibrate for your sensor:
-1. Open Serial Monitor (115200 baud)
+1. Open Serial Monitor (9600 baud)
 2. Observe moisture readings in dry and wet soil
 3. Set threshold between these values
 
