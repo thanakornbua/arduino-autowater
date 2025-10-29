@@ -56,12 +56,15 @@ void loop() {
       digitalWrite(PUMP_RELAY_PIN, HIGH);
       
       Serial.println("Watering complete");
+      
+      // Reset timer immediately after watering finishes
+      lastCheckTime = millis();
     } else {
       Serial.println("Soil moisture adequate - no watering needed");
+      
+      // Reset timer after check
+      lastCheckTime = currentTime;
     }
-    
-    // Reset timer immediately after check/watering
-    lastCheckTime = currentTime;
   }
   
   // Non-blocking loop continues
